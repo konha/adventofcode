@@ -5,6 +5,7 @@ These are my solutions to the [Advent of Code 2023 Puzzles](https://adventofcode
 - [Day 01](./01/)
 - [Day 02](./02/)
 - [Day 03](./03/)
+- [Day 04](./04/)
 
 All solutions are written in [Go](https://go.dev). Tests can be run with:
 ```shell
