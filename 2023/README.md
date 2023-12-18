@@ -12,6 +12,7 @@ These are my solutions to the [Advent of Code 2023 Puzzles](https://adventofcode
 - [Day 08](./08/)
 - [Day 09](./09/)
 - [Day 10](./10/)
+- [Day 11](./11/)
 
 All solutions are written in [Go](https://go.dev). Tests can be run with:
 ```shell
