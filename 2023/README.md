@@ -17,6 +17,7 @@ These are my solutions to the [Advent of Code 2023 Puzzles](https://adventofcode
 - [Day 14](./14/)
 - [Day 15](./15/)
 - [Day 16](./16/)
+- [Day 17](./17/)
 - [Day 18](./18/)
 - [Day 19](./19/)
 
