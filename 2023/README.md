@@ -20,6 +20,7 @@ These are my solutions to the [Advent of Code 2023 Puzzles](https://adventofcode
 - [Day 17](./17/)
 - [Day 18](./18/)
 - [Day 19](./19/)
+- [Day 20](./20/)
 
 All solutions are written in [Go](https://go.dev). Tests can be run with:
 ```shell
