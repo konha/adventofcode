@@ -38,7 +38,7 @@ type pulse struct {
 }
 
 type tracker struct {
-	targets    map[string]bool
+	targets    []string
 	counters   map[string]int
 	iterations int
 }
@@ -73,9 +73,9 @@ func fewestButtonPresses(lines []string) int {
 		}
 	}
 
-	targets := make(map[string]bool)
+	targets := make([]string, 0)
 	for cInput := range predecessorModule.cInputs {
-		targets[cInput] = true
+		targets = append(targets, cInput)
 	}
 
 	t := tracker{
@@ -148,9 +148,14 @@ func pushButton(modules []module, t *tracker) ([]module, int, int) {
 				for _, destination := range module.destinations {
 					//fmt.Println(module.name, sendHighPulse, "->", destination)
 					if t != nil {
-						if _, ok := t.targets[module.name]; ok && sendHighPulse {
-							t.counters[module.name] = t.iterations
-							delete(t.targets, module.name)
+						for i, target := range t.targets {
+							if target == module.name {
+								if sendHighPulse {
+									t.counters[target] = t.iterations
+									t.targets = append(t.targets[:i], t.targets[i+1:]...)
+								}
+								break
+							}
 						}
 						if len(t.targets) == 0 {
 							break
